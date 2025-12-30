@@ -22,7 +22,7 @@ View and manage all system roles and their assigned permissions.
 
 ### 2. Permission Overview
 Detailed list of all system permissions grouped by category.
-![Permission List](2.jpg)
+![Permission List](2.png)
 
 ### 3. Role Updated Successfully
 Real-time feedback using AJAX and sweet alerts.
