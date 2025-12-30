@@ -11,9 +11,15 @@ class RoleController extends Controller
 {
     public function index()
     {
-        // group_name অনুযায়ী group হবে
         $roles = Role::all();
-        $permissions = Permission::orderBy('group_name')->get()->groupBy('group_name');
+
+        $permissions = Permission::all()->map(function ($perm) {
+            $parts = explode('.', $perm->name);
+            $group = $parts[0] ?? $perm->name;
+
+            $perm->group_name = $group; // temporary attribute
+            return $perm;
+        })->groupBy('group_name');
 
         return view('backend.pages.roles.index', compact('roles', 'permissions'));
     }
