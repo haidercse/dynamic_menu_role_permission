@@ -18,7 +18,7 @@ A robust and dynamic Role-Based Access Control (RBAC) system built with **Larave
 
 ### 1. Dynamic Role Management
 View and manage all system roles and their assigned permissions.
-![Role List](1.png)
+![Role List](1.PNG)
 
 ### 2. Permission Overview
 Detailed list of all system permissions grouped by category.
